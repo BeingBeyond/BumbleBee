@@ -20,13 +20,10 @@ We will release our code soon.
 ## Citation
 If you find our work useful, please consider citing us!
 ```
-@misc{wang2025expertsgeneralistgeneralwholebody,
-title={From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots},
-author={Yuxuan Wang and Ming Yang and Weishuai Zeng and Yu Zhang and Xinrun Xu and Haobin Jiang and Ziluo Ding and Zongqing Lu},
-year={2025},
-eprint={2506.12779},
-archivePrefix={arXiv},
-primaryClass={cs.RO},
-url={https://arxiv.org/abs/2506.12779},
+@article{wang2025experts,
+  title={From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots},
+  author={Yuxuan Wang and Ming Yang and Weishuai Zeng and Yu Zhang and Xinrun Xu and Haobin Jiang and Ziluo Ding and Zongqing Lu},
+  journal={arXiv preprint arXiv:2506.12779},
+  year={2025}
 }
 ```
