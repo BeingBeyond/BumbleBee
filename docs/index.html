@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots">
+  <meta property="og:title" content="BumbleBee" />
+  <meta property="og:url" content="https://beingbeyond.github.io/BumbleBee/" />
+  <meta name="keywords" content="Humanoid, WBC">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BumbleBee</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=??"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', '???');
+  </script>
+
+  <style>
+    .video-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* Space out the pairs of videos */
+      width: 60%;
+      margin: 0 auto;
+      /* Center the container */
+      padding: 0 20px;
+      /* Add padding on the sides for smaller screens */
+    }
+
+    .video-two {
+      width: 48%;
+      /* Adjust width slightly for spacing */
+      margin-bottom: 20px;
+      /* Space between rows */
+    }
+
+    .video-group {
+      width: 31%;
+      /* Adjust width slightly for spacing */
+      margin-bottom: 20px;
+    }
+
+    .video-pair {
+      width: 23%;
+      /* Adjust width slightly for spacing */
+      margin-bottom: 20px;
+      /* Space between rows */
+    }
+
+    .video-pair video {
+      width: 100%;
+      /*Video itself occupies full-width of parent (.video-pair)*/
+      height: auto;
+      display: block;
+      /* Important for consistent sizing/spacing*/
+    }
+
+    .video-label {
+      text-align: center;
+      margin-top: 5px;
+    }
+  </style>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/bulma.min.css">
+  <link rel="stylesheet" href="./css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="icon" href="./images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./js/fontawesome.all.min.js"></script>
+  <script src="./js/bulma-carousel.min.js"></script>
+  <script src="./js/bulma-slider.min.js"></script>
+  <script src="./js/index.js"></script>
+</head>
+
+<body>
+
+
+  <section class="hero is-gray is-fullheight video" style="overflow: hidden; position:relative;">
+    <div class="hero-video" style="height: 100%; width: 177.77777778vh; min-width: 100%;min-height: 56.25vw;">
+      <video playsinline autoplay muted loop>
+        <source src="./videos/first_video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-video is-hidden-tablet is-inline-block-mobile"
+      style="height: 154.28571428vw; width: 100%; min-width:64.81481481vh;min-height:100%;">
+      <video playsinline autoplay muted loop>
+        <source src="./videos/first_verticle.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="overlay"></div>
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head is-hidden-mobile">
+      <header class="navbar">
+        <div class="container is-size-5">
+          <div class="navbar-menu">
+            <div class="navbar-end">
+              <a class="navbar-item pl-4 pr-4" href="https://arxiv.org/pdf/2506.12779">
+                <span class="icon" style="margin-right:5px;">
+                  <img src="./images/icon/pdf.svg" alt="PDF" />
+                </span>
+                <span>Paper</span>
+              </a>
+              <a class="navbar-item  pl-4 pr-4" href="https://arxiv.org/abs/2506.12779">
+                <span class="icon" style="margin-right:5px;">
+                  <img src="./images/icon/arxiv.svg" alt="arXiv" />
+                </span>
+                <span>arXiv</span>
+              </a>
+              <a class="navbar-item  pl-4 pr-4" href="https://github.com/BeingBeyond/BumbleBee">
+                <span class="icon" style="margin-right:5px;">
+                  <img src="./images/icon/github.svg" alt="github" />
+                </span>
+                <span>Project</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-1 publication-title is-size-1-mobile" style="font-size: 10rem;">
+          <!-- <span style="font-weight: bold; color: cornflowerblue; font-family: sans-serif;">JAEGER</span>
+                <span style="font-weight: bold; color: cornflowerblue; font-family: serif;">JAEGER</span>
+                <span style="font-weight: bold; color: cornflowerblue; font-family: monospace;">JAEGER</span>
+                <span style="font-weight: bold; color: cornflowerblue; font-family: YouYuan, sans-serif;">JAEGER</span> -->
+
+          <!-- <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&display=swap" rel="stylesheet">
+                <span style="font-family: 'Baloo 2', cursive; font-weight: bold; color: cornflowerblue;">JAEGER</span> -->
+
+
+          <link href="https://fonts.googleapis.com/css?family=Times+New+Roman" rel="stylesheet">
+          <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFD700; letter-spacing: -0.2em;">B</span>
+          <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFC300; letter-spacing: -0.2em;">u</span>
+          <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFB000; letter-spacing: -0.2em;">m</span>
+          <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFA000; letter-spacing: -0.2em;">b</span>
+          <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFAA00; letter-spacing: -0.2em;">l</span>
+          <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFD700; letter-spacing: -0.2em;">e</span>
+          <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFC300; letter-spacing: -0.2em;">B</span>
+          <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFB000; letter-spacing: -0.2em;">e</span>
+          <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFA000; letter-spacing: -0.2em;">e</span>
+
+          <!-- <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+                 <span style="font-family: 'Fredoka One', cursive; font-weight: bold; color: cornflowerblue;">JAEGER</span> -->
+
+          <!-- <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+                  <span style="font-family: 'Luckiest Guy', cursive; font-weight: bold; color: cornflowerblue;">JAEGER</span> -->
+
+          <!-- <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+                  <span style="font-family: 'Patrick Hand', cursive; font-weight: bold; color: cornflowerblue;">JAEGER</span> -->
+
+          <!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+                  <span style="font-family: 'Rubik', sans-serif; font-weight: bold; color: cornflowerblue;">JAEGER</span> -->
+        </h1>
+        <h1 class="subtitle is-1 publication-title is-size-3-mobile" style="font-size: 4rem; color: white;">
+          From Experts to a Generalist: <br> Toward General Whole-Body Control for Humanoid Robots
+        </h1>
+        <h1 class="subtitle is-1 publication-title is-size-4-mobile" style="font-size: 2rem; color: white;">
+          <br>PKU &nbsp;&nbsp; BeingBeyond
+        </h1>
+        <div class="column has-text-centered is-hidden-tablet">
+          <div class="publication-links">
+            <!-- PDF Link. -->
+            <span class="link-block">
+              <a href="https://arxiv.org/pdf/2505.06584" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <img src="./images/icon/pdf.svg" alt="PDF" />
+                </span>
+                <span>Paper</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="https://arxiv.org/abs/2505.06584" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <img src="./images/icon/arxiv.svg" alt="arXiv" />
+                </span>
+                <span>arXiv</span>
+              </a>
+            </span>
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a href="https://github.com/BeingBeyond/Jaeger" class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <img src="./images/icon/github.svg" alt="github" />
+                </span>
+                <span>Code</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero footer: will stick at the bottom -->
+    <!--
+
+        <div class="hero-foot is-hidden-mobile">
+          <nav class="tabs is-boxed is-fullwidth is-size-5">
+            <ul>
+              <li><a href="#umi">Robot Data without Robots</a></li>
+              <li><a href="#task-tracking">Task Tracking without Simulating Tasks</a></li>
+              <li><a href="#wbc">Whole-body Controller</a></li>
+              <li><a href="#hardware">Hardware & System</a></li>
+              <li><a href="#qa">Q & A</a></li>
+            </ul>
+          </nav>
+        </div>
+        -->
+  </section>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title is-size-3-mobile">
+              <!-- <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFD700; letter-spacing: -0.2em;">B</span>
+              <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFC300; letter-spacing: -0.2em;">u</span>
+              <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFB000; letter-spacing: -0.2em;">m</span>
+              <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFA000; letter-spacing: -0.2em;">b</span>
+              <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFAA00; letter-spacing: -0.2em;">l</span>
+              <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFD700; letter-spacing: -0.2em;">e</span>
+              <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFC300; letter-spacing: -0.2em;">B</span>
+              <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFB000; letter-spacing: -0.2em;">e</span>
+              <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFA000; letter-spacing: -0.2em;">e</span>
+              <br> -->
+              <span style="font-size: 90%">From Experts to a Generalist:<br> Toward General Whole-Body Control for Humanoid Robots</span>
+            </h1>
+
+            <h1>
+              <div class="is-size-4 publication-authors is-size-5-mobile">
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=CzgGl5cAAAAJ" target="_blank">Yuxuan Wang</a><sup>1,2*</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Ming Yang</a><sup>1,2*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=o0NO50kAAAAJ&hl=en" target="_blank">Ziluo Ding</a><sup>2*</sup>,</span>
+                <span class="author-block">
+                  <a href="https://gloriabhsfer.github.io/" target="_blank">Yu Zhang</a><sup>2*</sup>,</span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Weishuai Zeng</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=X4J3klUAAAAJ&hl=en&authuser=1" target="_blank">Xinrun Xu</a><sup>2</sup>,</span>
+                <br>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=5Oc2LAEAAAAJ&hl=en" target="_blank">Haobin Jiang</a><sup>1,2</sup>,</span>
+                <span class="author-block">
+                  <a href="https://z0ngqing.github.io/" target="_blank">Zongqing Lu</a><sup>1,2†</sup>
+                </span>
+              </div>
+            </h1>
+            <h1>
+              <br>
+              <div class="is-size-4 publication-authors is-size-5-mobile">
+                <span class="author-block" style="font-size: 100%"> <sup>1</sup>Peking University </span>&nbsp;&nbsp;&nbsp;
+                <span class="author-block" style="font-size: 100%"> <sup>2</sup>BeingBeyond </span>
+              </div>
+            </h1>
+            <h1>
+              <div class="is-size-5 publication-authors is-size-6-mobile">
+                <span class="author-block"><small><br><sup>*</sup>Equal Contribution &nbsp; <sup>†</sup>Corresponding Author</small></span>
+              </div>
+            </h1>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2506.12779"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2506.12779"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/BeingBeyond/BumbleBee"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Project</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container">
+        <div id="results-carousel1" class="carousel results-carousel">
+          <div class="item">
+            <video height="100%" autoplay muted loop>
+              <source src="./videos/Charleston.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-a">
+            <video id="a" height="100%" autoplay muted loop>
+              <source src="./videos/Cartwheel.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-b">
+            <video id="b" height="100%" autoplay muted loop>
+              <source src="./videos/Blueprint Suprem.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-c">
+            <video id="c" height="100%" autoplay muted loop>
+              <source src="./videos/BreadRoll.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-d">
+            <video id="d" height="100%" autoplay muted loop>
+              <source src="./videos/Gymnastics.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-3 is-size-4-mobile">Abstract</h2>
+          <div class="content has-text-justified">
+            <ol type="a">
+              Achieving general agile whole-body control on humanoid robots remains a major challenge due to diverse motion demands and data conflicts. While existing frameworks excel in training single motion-specific policies, they struggle to generalize across highly varied behaviors due to conflicting control requirements and mismatched data distributions. In this work, we propose BumbleBee (BB), an expert-generalist learning framework that combines motion clustering and sim-to-real adaptation to overcome these challenges. BB first leverages an autoencoder-based clustering method to group behaviorally similar motions using motion features and motion descriptions. Expert policies are then trained within each cluster and refined with real-world data through iterative delta action modeling to bridge the sim-to-real gap. Finally, these experts are distilled into a unified generalist controller that preserves agility and robustness across all motion types. Experiments on two simulators and a real humanoid robot demonstrate that BB achieves state-of-the-art general whole-body control, setting a new benchmark for agile, robust, and generalizable humanoid control in the real world.
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-three-thirds">
+          <h2 class="title is-3 is-size-4-mobile" style="text-align: center">
+            <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFD700; letter-spacing: -0.2em;">B</span>
+            <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFC300; letter-spacing: -0.2em;">u</span>
+            <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFB000; letter-spacing: -0.2em;">m</span>
+            <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFA000; letter-spacing: -0.2em;">b</span>
+            <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFAA00; letter-spacing: -0.2em;">l</span>
+            <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFD700; letter-spacing: -0.2em;">e</span>
+            <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFC300; letter-spacing: -0.2em;">B</span>
+            <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFB000; letter-spacing: -0.2em;">e</span>
+            <span style="font-family: 'apple-system', Times, serif; font-weight: bold; color: #FFA000; letter-spacing: -0.2em;">e</span>
+          </h2>
+
+          <div class="columns is-centered">
+            <img src="./images/framework.png" alt="JAEGER" style="width: 100%;">
+          </div>
+
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-three-thirds">
+              <div class="content has-text-justified">
+                <br>
+                <ol type="a">
+                  Our approach begins with a data curation stage that combines motion retargeting with PHC-based filtering to construct a clean and transferable dataset.
+            The curated motions are then organized through an autoencoder-driven clustering process, which groups samples according to both semantic and kinematic similarities.
+            For each resulting cluster, we train expert policies through iterative delta fine-tuning, enabling them to specialize in the distinct motion patterns represented.
+            In the final stage, these specialized experts are distilled into a unified general Whole-Body Control (WBC) policy by means of a Transformer-based architecture, thereby integrating diverse skills into a single robust model.
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container content">
+      <h2 style="margin-left: 14%">BibTeX</h2>
+      <pre>
+      <code>@misc{wang2025expertsgeneralistgeneralwholebody,
+      title={From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots},
+      author={Yuxuan Wang and Ming Yang and Weishuai Zeng and Yu Zhang and Xinrun Xu and Haobin Jiang and Ziluo Ding and Zongqing Lu},
+      year={2025},
+      eprint={2506.12779},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2506.12779},
+      }</code>
+  </pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website template is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a> and adapted from source at <a
+                href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> and <a
+                href="https://umi-on-legs.github.io/">UMI</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
