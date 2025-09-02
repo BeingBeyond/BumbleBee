@@ -22,7 +22,7 @@ If you find our work useful, please consider citing us!
 ```
 @article{wang2025experts,
   title={From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots},
-  author={Yuxuan Wang and Ming Yang and Weishuai Zeng and Yu Zhang and Xinrun Xu and Haobin Jiang and Ziluo Ding and Zongqing Lu},
+  author={Yuxuan Wang and Ming Yang and Ziluo Ding and Yu Zhang and Weishuai Zeng and Xinrun Xu and Haobin Jiang and Zongqing Lu},
   journal={arXiv preprint arXiv:2506.12779},
   year={2025}
 }
