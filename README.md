@@ -1,7 +1,7 @@
 # From Experts to a Generalist: Toward General Whole-Body Control for Humanoid Robots
 <div align="center">
 
-[[Website]](https://github.com/BeingBeyond/BumbleBee)
+[[Website]](https://beingbeyond.github.io/BumbleBee/)
 [[arXiv]](https://arxiv.org/abs/2506.12779)
 
 [![Python Version](https://img.shields.io/badge/Python-3.10-blue.svg)]()
